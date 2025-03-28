@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles-01.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>PRP Transfusions: The Path to Eternal Youth</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#" class="logo">Eternal Vitality</a>
+        </div>
+
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
+        <div class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre PRP</a></li>
+                <li><a href="#benefits">Beneficios</a></li>
+                <li><a href="./page-02.html">Lector</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header id="home">
+            <h1>Eternal Vitality</h1>
+            <p class="tagline">The Gothic Renaissance of PRP Transfusions</p>
+        </header>
+
+        <section id="about" class="intro">
+            <h2>The Elixir of Modern Times</h2>
+            <p>Discover how Platelet-Rich Plasma has become the modern fountain of youth, drawing from ancient wisdom
+                with contemporary science.</p>
+            <div class="blood-divider"></div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <h2>Transcending Mortality</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Rejuvenation</h3>
+                    <p>The cellular renaissance that awakens dormant vitality within your being.</p>
+                </div>
+                <div class="card">
+                    <h3>Restoration</h3>
+                    <p>Reclaim what time has taken, as your essence is renewed through ancient blood wisdom.</p>
+                </div>
+                <div class="card">
+                    <h3>Rebirth</h3>
+                    <p>Emerge transformed, as the veil between youth and age becomes increasingly transparent.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="awareness" class="awareness">
+            <h2>The Dark Truth</h2>
+            <p>Beyond the allure lies a reality we must confront. The pursuit of eternal youth comes with consequences
+                we have yet to fully comprehend.</p>
+            <button class="gothic-btn">Unveil the Mystery</button>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@eternalvitality.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+
+                <!-- Chatbot Section -->
+                <div class="chatbot-container">
+                    <div class="chatbot-toggle">
+                        <span class="chatbot-icon">
+                            <i class="fas fa-comment-alt"></i>
+                        </span>
+                        <span class="chatbot-text">Consulta con Vitalis</span>
+                    </div>
+
+                    <div class="chatbot-window">
+                        <div class="chatbot-header">
+                            <div class="chatbot-title">
+                                <i class="fas fa-robot"></i> Vitalis - Asistente Virtual
+                            </div>
+                            <button class="chatbot-close">&times;</button>
+                        </div>
+
+                        <div class="chatbot-messages">
+                            <div class="message bot-message">
+                                <div class="message-content">
+                                    Saludos, soy Vitalis. Estoy aquí para responder tus preguntas sobre PRP y
+                                    tratamientos de rejuvenecimiento. ¿En qué puedo ayudarte hoy?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-input">
+                            <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí...">
+                            <button id="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+
+                        <div class="chatbot-suggestions">
+                            <button class="suggestion-btn">¿Qué es PRP?</button>
+                            <button class="suggestion-btn">Beneficios del PRP</button>
+                            <button class="suggestion-btn">Costo de tratamientos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">Embrace the darkness to find eternal light</p>
+    </footer>
+
+    <script>
+        // JavaScript para la navegación móvil
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+            navToggle.classList.toggle('nav-toggle-active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-menu-visible');
+                navToggle.classList.remove('nav-toggle-active');
+            });
+        });
+
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const chatbotToggle = document.querySelector('.chatbot-toggle');
+            const chatbotWindow = document.querySelector('.chatbot-window');
+            const chatbotClose = document.querySelector('.chatbot-close');
+            const chatbotMessages = document.querySelector('.chatbot-messages');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            const suggestionBtns = document.querySelectorAll('.suggestion-btn');
+
+            // Knowledge base for the chatbot
+            const knowledgeBase = {
+                'qué es prp': 'PRP (Plasma Rico en Plaquetas) es un tratamiento que utiliza tu propia sangre, concentrando las plaquetas para estimular la regeneración celular y promover la curación y rejuvenecimiento.',
+                'que es prp': 'PRP (Plasma Rico en Plaquetas) es un tratamiento que utiliza tu propia sangre, concentrando las plaquetas para estimular la regeneración celular y promover la curación y rejuvenecimiento.',
+                'beneficios del prp': 'Los beneficios del PRP incluyen: regeneración de tejidos, reducción de arrugas, mejora en la textura de la piel, estimulación del crecimiento del cabello, y aceleración de la curación de heridas, todo de manera natural.',
+                'costo de tratamientos': 'El costo de los tratamientos de PRP varía según la región y el tipo de aplicación, pero generalmente oscila entre $300-$800 por sesión. Para un presupuesto personalizado, te recomendamos contactarnos directamente.',
+                'efectos secundarios': 'El PRP es generalmente seguro con mínimos efectos secundarios que pueden incluir enrojecimiento temporal, hinchazón leve o sensibilidad en el área tratada. Al usar tu propia sangre, el riesgo de reacciones alérgicas es extremadamente bajo.',
+                'duración del tratamiento': 'Una sesión típica de PRP dura entre 30-60 minutos. Para resultados óptimos, generalmente se recomiendan de 3 a 6 sesiones espaciadas cada 4-6 semanas, seguidas de mantenimiento cada 6-12 meses.',
+                'cómo funciona': 'El proceso comienza extrayendo una pequeña cantidad de tu sangre, que luego se centrifuga para separar y concentrar las plaquetas. Este concentrado rico en factores de crecimiento se inyecta en las áreas específicas para estimular la regeneración celular natural.',
+                'como funciona': 'El proceso comienza extrayendo una pequeña cantidad de tu sangre, que luego se centrifuga para separar y concentrar las plaquetas. Este concentrado rico en factores de crecimiento se inyecta en las áreas específicas para estimular la regeneración celular natural.',
+                'juventud eterna': 'Aunque el PRP ofrece resultados impresionantes en rejuvenecimiento, la "juventud eterna" es un concepto metafórico. El PRP trabaja con tus procesos naturales para mejorar la calidad y apariencia de la piel, pero forma parte de un enfoque integral de bienestar.',
+                'hola': 'Saludos oscuros. Soy Vitalis, tu guía en el camino hacia la regeneración. ¿En qué puedo iluminar tu conocimiento sobre PRP hoy?',
+                'adios': 'Que la vitalidad eterna te acompañe en tu camino. Estaré aquí cuando necesites más conocimiento sobre el elixir de la juventud.',
+                'gracias': 'El conocimiento es poder. Estoy para servirte en tu búsqueda de la eterna vitalidad.'
+            };
+
+            // Default response for unknown queries
+            const defaultResponse = "Interesante pregunta. Para información más detallada sobre ese tema específico, te recomiendo contactar directamente con nuestros especialistas en PRP.";
+
+            // Toggle chatbot visibility
+            chatbotToggle.addEventListener('click', () => {
+                chatbotWindow.classList.toggle('chatbot-window-visible');
+                chatbotToggle.classList.toggle('chatbot-toggle-active');
+            });
+
+            // Close chatbot
+            chatbotClose.addEventListener('click', () => {
+                chatbotWindow.classList.remove('chatbot-window-visible');
+                chatbotToggle.classList.remove('chatbot-toggle-active');
+            });
+
+            // Process user message
+            function processMessage(message) {
+                // Add user message to chat
+                addMessage(message, 'user');
+
+                // Process and respond
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response, 'bot');
+                }, 500);
+            }
+
+            // Get bot response based on user input
+            function getBotResponse(message) {
+                const normalizedMessage = message.toLowerCase().trim();
+
+                // Check if the message matches any key in the knowledge base
+                for (const [key, value] of Object.entries(knowledgeBase)) {
+                    if (normalizedMessage.includes(key)) {
+                        return value;
+                    }
+                }
+
+                // Check for partial matches
+                for (const [key, value] of Object.entries(knowledgeBase)) {
+                    const keywords = key.split(' ');
+                    for (const word of keywords) {
+                        if (word.length > 3 && normalizedMessage.includes(word)) {
+                            return value;
+                        }
+                    }
+                }
+
+                return defaultResponse;
+            }
+
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message');
+                messageDiv.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+
+                const contentDiv = document.createElement('div');
+                contentDiv.classList.add('message-content');
+                contentDiv.textContent = text;
+
+                messageDiv.appendChild(contentDiv);
+                chatbotMessages.appendChild(messageDiv);
+
+                // Scroll to bottom
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // Send message on button click
+            sendBtn.addEventListener('click', () => {
+                const message = userInput.value.trim();
+                if (message) {
+                    processMessage(message);
+                    userInput.value = '';
+                }
+            });
+
+            // Send message on Enter key
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const message = userInput.value.trim();
+                    if (message) {
+                        processMessage(message);
+                        userInput.value = '';
+                    }
+                }
+            });
+
+            // Handle suggestion buttons
+            suggestionBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    processMessage(btn.textContent);
+                });
+            });
+
+            // Add typing animation
+            function showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.classList.add('message', 'bot-message', 'typing-indicator');
+
+                const contentDiv = document.createElement('div');
+                contentDiv.classList.add('message-content');
+                contentDiv.innerHTML = '<span></span><span></span><span></span>';
+
+                typingDiv.appendChild(contentDiv);
+                chatbotMessages.appendChild(typingDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+                return typingDiv;
+            }
+
+            function removeTypingIndicator(indicator) {
+                if (indicator && indicator.parentNode) {
+                    indicator.parentNode.removeChild(indicator);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

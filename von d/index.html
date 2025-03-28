@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles-01.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>PRP Transfusions: The Path to Eternal Youth</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#" class="logo">Eternal Vitality</a>
+        </div>
+
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
+        <div class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre PRP</a></li>
+                <li><a href="#benefits">Beneficios</a></li>
+                <li><a href="#awareness">Conciencia</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header id="home">
+            <h1>Eternal Vitality</h1>
+            <p class="tagline">The Gothic Renaissance of PRP Transfusions</p>
+        </header>
+
+        <section id="about" class="intro">
+            <h2>The Elixir of Modern Times</h2>
+            <p>Discover how Platelet-Rich Plasma has become the modern fountain of youth, drawing from ancient wisdom
+                with contemporary science.</p>
+            <div class="blood-divider"></div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <h2>Transcending Mortality</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Rejuvenation</h3>
+                    <p>The cellular renaissance that awakens dormant vitality within your being.</p>
+                </div>
+                <div class="card">
+                    <h3>Restoration</h3>
+                    <p>Reclaim what time has taken, as your essence is renewed through ancient blood wisdom.</p>
+                </div>
+                <div class="card">
+                    <h3>Rebirth</h3>
+                    <p>Emerge transformed, as the veil between youth and age becomes increasingly transparent.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="awareness" class="awareness">
+            <h2>The Dark Truth</h2>
+            <p>Beyond the allure lies a reality we must confront. The pursuit of eternal youth comes with consequences
+                we have yet to fully comprehend.</p>
+            <button class="gothic-btn">Unveil the Mystery</button>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@eternalvitality.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">Embrace the darkness to find eternal light</p>
+    </footer>
+
+    <script>
+        // JavaScript para la navegación móvil
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+            navToggle.classList.toggle('nav-toggle-active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-menu-visible');
+                navToggle.classList.remove('nav-toggle-active');
+            });
+        });
+    </script>
+</body>
+
+</html>
